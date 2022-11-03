@@ -3,22 +3,24 @@ AutoRestart: ''
 Container_Wait: 3
 LogEnable: true
 QingLong:
-- Client_ID: jBqjQkL_GF8v  #【前方留一个空格】
-  Client_Secret: ySOIr4yvVATGN7glM_HcOQxR #【前方留一个空格】
-  url: http://10.10.1.119:5800    #【前方留一个空格，最后不要带/】
+- Client_ID: jBqjQkL_GF8v
+  Client_Secret: ySOIr4yvVATGN7glM_HcOQxR
+  url: http://10.10.1.119:5800
+RestartByAuthFailTimes: '0'
+SpyEnable: 开
 Telegram:
   Log_En: true
   TgLost: ''
   Welcome: Faker,我来啦~~
-  api_hash: 367a6b0c901b418bc8a3b5eefc4f6b77   #【前方留一个空格】
-  api_id: 7732145 #【前方留一个空格】
-  forward_channel_id: ''  #【可选，不写的话就不动】你要转发的目的地群或频道
-  forward_keyword: []     #【可选，不写的话就不动】你要转发的关键字，包含才会转发
-  forward_user_id: []     #【可选，不写的话就不动】你要转发谁的消息，可以是群id，用户id，机器人id，频道id
-  forward_user_name: []   #【可选，不写的话就不动】你要转发叫以下名字的信息
+  api_hash: 367a6b0c901b418bc8a3b5eefc4f6b77
+  api_id: 7732145
+  forward_channel_id: ''
+  forward_keyword: []
+  forward_user_id: []
+  forward_user_name: []
   listen_CH:
-  - -1001670294604   #【Faker线报频道】
-  log_id: -832943383 #你自己创建的TG监控群号 别填我大群！！！
+  - -1001670294604
+  log_id: -832943383
   master_id:
   - 802942216
   mtproto: ''
