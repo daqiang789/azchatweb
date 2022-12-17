@@ -27,7 +27,7 @@ Telegram:
   proxy_http: ''
   proxy_ip: ''
   proxy_password: ''
-  proxy_port: null
+  proxy_port: 
   proxy_type: ''
   proxy_username: ''
 Use_SillyGirl: false
@@ -96,6 +96,8 @@ js_config:
   KeyWord:
   - - jd_cjwxKnowledgeActivity_activityId
   - - jd_cjhy_wxKnowledgeActivity_activityId
+  - - jd_wxKnowledgeActivity_activityUrl
+  RegularRules: 'cjhy@[\d|a-z]{32}@0'
   Name: 【云上】CJ知识超人
   Script: jd_cjhy_wxKnowledgeActivity.js
   TimeOut: 0
@@ -106,7 +108,9 @@ js_config:
   KeyWord:
   - - jd_lzkj_wxKnowledgeActivity_activityId
   - - jd_wxKnowledgeActivity_activityId
+  - - jd_wxKnowledgeActivity_activityUrl
   Name: 【云上】LJ知识超人
+  RegularRules: 'lzkj@[\d|a-z]{32}@0'
   Script: jd_lzkj_wxKnowledgeActivity.js
   TimeOut: 0
   Wait: 2
@@ -151,16 +155,9 @@ js_config:
   Env: jd_cjhy_wxCollectionActivityId
   KeyWord:
   - - jd_cjhy_wxCollectionActivityId
+  - - jd_wxCollectionActivity_activityUrl
   Name: 【抽奖】cjhy加购物车
-  Script: jd_cjhy_wxCollectionActivity.js
-  TimeOut: 0
-  Wait: 2
-- Container:
-  - - 1
-  Env: jd_cjhy_wxDrawActivity_Id
-  KeyWord:
-  - - jd_cjhy_wxDrawActivity_Id
-  Name: 【抽奖】cjhy幸运抽大奖
+  RegularRules: 'cjhy@[\d|a-z]{32}@0'
   Script: jd_cjhy_wxCollectionActivity.js
   TimeOut: 0
   Wait: 2
@@ -169,7 +166,9 @@ js_config:
   Env: jd_lzkj_wxCollectionActivityId
   KeyWord:
   - - jd_lzkj_wxCollectionActivityId
+  - - jd_wxCollectionActivity_activityUrl
   Name: 【抽奖】lzkj加购物车
+  RegularRules: 'lzkj@[\d|a-z]{32}@0'
   Script: jd_lzkj_wxCollectionActivity.js
   TimeOut: 0
   Wait: 2
@@ -184,20 +183,12 @@ js_config:
   Wait: 2
 - Container:
   - - 1
-  Env: JD_Lottery
-  KeyWord:
-  - - JD_Lottery
-  Name: 【抽奖】joy抽奖机通用
-  Script: jd_lotterys.js
-  TimeOut: 0
-  Wait: 2
-- Container:
-  - - 1
   Env: jd_wxShopFollowActivity_activityId
   KeyWord:
   - - jd_wxShopFollowActivity_activityId
   - - jd_wxShopFollowActivity_activityUrl
   Name: 【抽奖】关注店铺抽奖
+  RegularRules: '@[\d|a-z]{32}@0'
   Script: jd_wxShopFollowActivity.js
   TimeOut: 0
   Wait: 2
@@ -583,7 +574,9 @@ js_config:
   Env: jd_cjhy_wxShopFollowActivity_activityId
   KeyWord:
   - - jd_cjhy_wxShopFollowActivity_activityId
+  - - jd_wxShopFollowActivity_activityUrl
   Name: 【Faker】cjhy关注店铺有礼
+  RegularRules: 'cjhy@[\d|a-z]{32}@0'
   Script: jd_cjhy_wxShopFollowActivity.js
   TimeOut: 0
   Wait: 2
@@ -592,7 +585,9 @@ js_config:
   Env: jd_lzkj_wxShopFollowActivity_activityId
   KeyWord:
   - - jd_lzkj_wxShopFollowActivity_activityId
+  - - jd_wxShopFollowActivity_activityUrl
   Name: 【Faker】lzkj关注店铺有礼
+  RegularRules: 'lzkj@[\d|a-z]{32}@0'
   Script: jd_lzkj_wxShopFollowActivity.js
   TimeOut: 0
   Wait: 2
@@ -601,7 +596,9 @@ js_config:
   Env: jd_cjhy_wxShopGift_ids
   KeyWord:
   - - jd_cjhy_wxShopGift_ids
+  - - jd_wxShopGift_activityUrl
   Name: 【Faker】cjhy店铺礼包
+  RegularRules: 'cjhy@[\d|a-z]{32}@0'
   Script: jd_cjhy_wxShopGift.js
   TimeOut: 0
   Wait: 2
@@ -610,7 +607,9 @@ js_config:
   Env: jd_lzkj_wxShopGift_ids
   KeyWord:
   - - jd_lzkj_wxShopGift_ids
+  - - jd_wxShopGift_activityUrl
   Name: 【Faker】lzkj店铺礼包
+  RegularRules: 'lzkj@[\d|a-z]{32}@0'
   Script: jd_lzkj_wxShopGift.js
   TimeOut: 0
   Wait: 2
@@ -623,4 +622,86 @@ js_config:
   Script: jd_luck_draw.js
   TimeOut: 0
   Wait: 2
-update_url: https://raw.githubusercontent.com/xieshang/AutoSpy/master/updatelist.json
+- Container:
+  - - 1
+  Env: jd_txzj_lottery_id
+  KeyWord:
+  - - jd_txzj_lottery_id
+  Name: 【Faker】txzj抽奖通用
+  Script: jd_txzj_lottery.js
+  TimeOut: 0
+  Wait: 2
+- Container:
+  - - 1
+  Env: jd_drawCenter_activityId
+  KeyWord:
+  - - jd_drawCenter_activityId
+  Name: 【Faker】店铺抽奖-刮刮乐
+  Script: jd_drawCenter.js
+  TimeOut: 0
+  Wait: 2
+- Container:
+  - - 1
+  Env: jd_txzj_sign_in_id
+  KeyWord:
+  - - jd_txzj_sign_in_id
+  Name: 【Faker】收藏大师签到
+  Script: jd_txzj_sign_in.js
+  TimeOut: 0
+  Wait: 2
+- Container:
+  - - 1
+  Env: jd_wxFansInterActionActivity_activityId
+  KeyWord:
+  - - jd_wxFansInterActionActivity_activityId
+  Name: 【Faker】粉丝互动通用
+  Script: jd_wxFansInterActionActivity.js
+  TimeOut: 0
+  Wait: 2
+- Container:
+  - - 1
+  Env: jd_txzj_collect_item_id
+  KeyWord:
+  - - jd_txzj_collect_item_id
+  Name: 【Faker】收藏大师关注有礼
+  Script: jd_txzj_collect_item.js
+  TimeOut: 0
+  Wait: 2
+- Container:
+  - - 1
+  Env: jd_lzkjInteractId
+  KeyWord:
+  - - jd_lzkjInteractId
+  Name: 【船长】Interact邀请有礼
+  Script: jd_lzkjInteract.py
+  TimeOut: 0
+  Wait: 2
+- Container:
+  - - 1
+  Env: jd_lzkj_interactsaas_yqrhyl_activityId
+  KeyWord:
+  - - jd_lzkj_interactsaas_yqrhyl_activityId
+  Name: 【Faker】lzkj邀请入会有礼
+  Script: jd_lzkj_interact_yqrhyl.js
+  TimeOut: 0
+  Wait: 2
+- Container:
+  - - 1
+  Env: jd_shop_draw_ids
+  KeyWord:
+  - - jd_shop_draw_ids
+  Name: 【Faker】环境店铺抽奖
+  Script: jd_shop_draw.js
+  TimeOut: 0
+  Wait: 2
+- Container:
+  - - 1
+  Env: jd_shopGifts_ids
+  KeyWord:
+  - - jd_shopGifts_ids
+  Name: 【Faker】环境店铺礼包
+  Script: jd_shopGifts.js
+  TimeOut: 0
+  Wait: 2
+logmode: 0
+update_url: https://raw.githubusercontent.com/xieshang/AutoSpy/master/updatelist.json 
