@@ -1,0 +1,23 @@
+Aauthentication: "9912866051342448-64069B93DA375C8802E210100ACDF6F95C65C2E7B7267BE6658F195E5A0B054D7EBE7C96901F0D95799B8EE44D9CB994040132A96F79106685DA0D487A0131A9181C946D6988E180C4DD724D116CF8E7F6C9DCEC01B730505C6D9A56B188F7F3BE36555F742ADA6F3A5E39CC9E8423CD7C78B43AAE296B8DFE07A55851B4E7C6-"
+AutoRestart: ''
+Container_Wait: 3
+LogEnable: true
+QingLong:
+- Client_ID: jBqjQkL_GF8v
+  Client_Secret: ySOIr4yvVATGN7glM_HcOQxR
+  url: http://192.168.110.240:5800
+Telegram:
+  Log_En: true
+  TgLost: ''
+  Welcome: Faker,我来啦~~
+  api_hash: 367a6b0c901b418bc8a3b5eefc4f6b77
+  api_id: 7732145
+  forward_channel_id: ''  
+  forward_keyword: []     
+  forward_user_id: []     
+  forward_user_name: []   
+  listen_CH:
+  - -1001670294604
+  log_id: -832943383
+  master_id:
+  - 802942216
