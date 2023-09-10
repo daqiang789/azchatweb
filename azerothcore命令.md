@@ -77,5 +77,8 @@ account set password 帐号 密码 密码2
 NPCbot插件：
 https://github.com/NetherstormX/NetherBot
 
-添加机器人
+### 添加机器人
 npcbot spawn
+
+### 登陆器：
+链接: https://pan.baidu.com/s/1bXnGtWdHukHsBJ6rRgtN7g?pwd=g9x5 提取码: g9x5
