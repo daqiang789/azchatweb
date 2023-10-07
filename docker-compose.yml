@@ -6,7 +6,7 @@ services:
     ports:
       - 3002:3002
     environment:
-      OPENAI_API_KEY: <Azure OpenAI API Key>
+      OPENAI_API_KEY: <Azure OpenAI API Key>#azkey
       OPENAI_API_BASE_URL: http://azure-openai:8080
       OPENAI_API_MODEL: gpt-3.5-turbo
       MAX_REQUEST_PER_HOUR: 1000
@@ -23,8 +23,8 @@ services:
     ports:
       - 8080:8080
     environment:
-      AZURE_OPENAI_ENDPOINT: <Azure OpenAI API Endpoint>
-      AZURE_OPENAI_DEPLOYMENT_ID: <Azure OpenAI API Deployment ID>
+      AZURE_OPENAI_ENDPOINT: <Azure OpenAI API Endpoint>#项目网址
+      AZURE_OPENAI_DEPLOYMENT_ID: <Azure OpenAI API Deployment ID>#项目ID你起的名字
       AZURE_OPENAI_API_VERSION: 2023-03-15-preview
     networks:
       - chatgpt-ns
